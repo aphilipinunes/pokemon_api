@@ -10,8 +10,7 @@ Ao clicar em um pokémon da lista, apresente os detalhes do mesmo. O detalhe dev
 
 #### Requisitos:
  - Utilize HTML5 + CSS3 com Flex.
- - Utilize React ou VueJS no desenvolvimento.
- - Utilize JQuery.
+ - Utilize JQuery, React ou VueJS no desenvolvimento.
  - Não utilize Bootstrap ou outros frameworks do tipo.
  - O Layout precisa ser responsivo.
  - Descreva de forma simples no README os passos para execução do seu projeto.
