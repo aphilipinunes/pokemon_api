@@ -1,35 +1,22 @@
-# Teste Frontend
-Crie uma aplicação utilizando e consumindo a pokéAPI.
+
+##### Layout ###
+Utilizado cores, formas arredondadas e fontes inspirados no logo e desenho "Pokémon"
 
 ##### Lista de Pokémons da primeira geração ###
-Crie uma lista da primeira geração de pokémons (1 ao 151) em ordem crescente. Cada item da lista deve conter imagem, número, nome e tipo. 
-Utilize Scroll infinito para carregar novos pokémons e LazyLoad para o carregamento das imagens.
+lista da primeira geração de pokémons (1 ao 150) em ordem crescente. 
+Cada item da lista contém imagem, nome, peso, altura, experiencia, estatísticas, habilidades e tipo. 
+Utilizado LazyLoad para o carregamento das imagens, e o consumo de api foi através de jquery/json.
+Carregamento dos pokémons conforme o usuário faz scroll na página, de 20 em 20 itens(api), Caso o usuário tenha um monitor grande (1500px de largura), o primeiro carregamento será até preencher a altura do monitor, 20, 40, etc.
 
 ##### Detalhe do Pokémon ###
-Ao clicar em um pokémon da lista, apresente os detalhes do mesmo. O detalhe deve conter a maior quantidade possível de informações a respeito.
+Detalhes do pokémon através de um único modal jquery, só muda as informações através do clique
+Modal responsivo
 
-#### Requisitos:
- - Utilize HTML5 + CSS3 com Flex.
- - Utilize JQuery, React ou VueJS no desenvolvimento.
- - Não utilize Bootstrap ou outros frameworks do tipo.
- - O Layout precisa ser responsivo.
- - Descreva de forma simples no README os passos para execução do seu projeto.
- - Deixe seu repositório público para analise do Pull Request.
 
-#### Ganha mais pontos:
- - Automação com Grunt ou Gulp.
- - Otimizações para aumentar a velocidade de renderização.
- - UI e UX bem pensadas e executadas.
- 
-#### Submissão
- - Criar um fork desse projeto e entregar via Pull Request.
+#### Utilizados:
+ - Utilizado HTML5 + CSS3 com Flex.
+ - Utilizado JQuery e Json.
+ - Layout responsivo.
+ - Automação com Gulp e utilizado Sass para o css.
+ - CSS e JS minificados via Gulp para velocidade de renderização.
 
-#### Prazo de Entrega
- - 3 Dias.
-
-#### Dados de acesso a api da pokéAPI
- - Referência dos pokémons da primeira geração: [List of Pokémon by National Pokédex number - Generation I - Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number#List_of_Pok.C3.A9mon_by_National_Pok.C3.A9dex_number) 
- - API: https://pokeapi.co/
- - Documentação: https://pokeapi.co/docsv2/
- 
-# Boa Sorte :)

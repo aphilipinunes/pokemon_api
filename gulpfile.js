@@ -14,7 +14,8 @@ var directory = 'build';
 gulp.task('scripts', function () {
     return gulp.src(['src/js/jquery.min.js',
     'src/js/jquery-ui.js',
-     'src/js/jquery.lazyload.min.js',
+     'src/js/jquery.lazy.js',
+     'src/js/jquery.lazy.plugins.js',
           'src/js/jquery.modal.min.js',
     'src/js/main.js'])
   	.on('error', function (err) {

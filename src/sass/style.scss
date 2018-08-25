@@ -53,12 +53,6 @@ header {
     }
 }
 
-.poke_content {
-    max-width: 1050px;
-    margin: auto;
-    flex-wrap: wrap;
-    display: flex;
-}
 
 #modal {
     font-family: $font-texts;
@@ -107,73 +101,81 @@ header {
     }
 }
 
-.pokemon {
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 40px;
-    background-position: 1px -1px;
-    @include transition();
-    position: relative;
-    flex: 1;
-    margin: 0 4% 20px;
 
-    img {
-        width: 96px;
-        height: 96px;
-    }
+.poke_content {
+    max-width: 1050px;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
 
-    .border {
-        border-top: solid 1px $colorBlue;
+
+    .pokemon {
         display: inline-block;
-        border-radius: 90px;
-        min-height: 143px;
-    }
-
-
-    .pokebola {
-        width: 40px;
-        height: 40px;
-        background-image: url(../images/pokebola.png);
-        background-repeat: no-repeat;
-        background-size: 40px;
-        display: inline-block;
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0;
+        text-align: center;
+        margin-bottom: 40px;
+        background-position: 1px -1px;
         @include transition();
-    }
+        position: relative;
+        flex: 1;
+        margin: 0 4% 20px;
 
-    &:hover, &:active, &:focus {
-        transform: scale(1.1);
-        background-position: 44px 10px;
+        img {
+            width: 96px;
+            height: 96px;
+        }
+
+        .border {
+            border-top: solid 1px $colorBlue;
+            display: inline-block;
+            border-radius: 90px;
+            min-height: 143px;
+        }
+
 
         .pokebola {
+            width: 40px;
+            height: 40px;
+            background-image: url(../images/pokebola.png);
+            background-repeat: no-repeat;
             background-size: 40px;
-            opacity: 1;
-            top: 13px;
-            left: 22%;
+            display: inline-block;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            @include transition();
+        }
+
+        &:hover, &:active, &:focus {
+            transform: scale(1.1);
+            background-position: 44px 10px;
+
+            .pokebola {
+                background-size: 40px;
+                opacity: 1;
+                top: 13px;
+                left: 22%;
+            }
+        }
+
+        p {
+            font-family: $font-secondary;
+            line-height: 21px;
+            letter-spacing: 2px;
+            margin: 0;
+            display: inline-block;
+            width: 100%;
+            color: darken($colorBlue, 20);
+            font-size: 14px;
+        }
+
+        .lazyload {
+            width: 96px;
+            height: 96px;
+            display: inline-block;
         }
     }
-
-    p {
-        font-family: $font-secondary;
-        line-height: 21px;
-        letter-spacing: 2px;
-        margin: 0;
-        display: inline-block;
-        width: 100%;
-        color: darken($colorBlue, 20);
-        font-size: 14px;
-    }
-
-    .lazyload {
-        width: 96px;
-        height: 96px;
-        display: inline-block;
-    }
 }
-
 
 .loading.bottom {
     bottom: 0;
@@ -249,9 +251,6 @@ header {
 @media (min-width: 1500px) {
     .poke_content {
         max-width: 1500px;
-        margin: auto;
-        flex-wrap: wrap;
-        display: flex;
     }
 
     .pokemon {

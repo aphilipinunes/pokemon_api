@@ -1,10 +1,23 @@
-$(window).scroll(function () {
+﻿$(window).scroll(function () {
     //scroll para mobile
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height()) {
-            carregaImagens(scroll);
+     
+        window.onscroll = function () {
+            var scrollHeight, totalHeight;
+            scrollHeight = document.body.scrollHeight;
+            totalHeight = window.scrollY + window.innerHeight;
 
+            if (totalHeight >= scrollHeight) {
+                carregaImagens(scroll);
+            }
         }
+
+        //$(window).bind('scroll', function () {
+        //    if ($(window).scrollTop() >= $('.poke_content').offset().top + $('.posts').outerHeight() - window.innerHeight) {
+        //        alert('end reached');
+        //    }
+        //});
+      
     } else {
 
         //scroll para desktop
@@ -13,21 +26,20 @@ $(window).scroll(function () {
             carregaImagens(scroll);
         }
 
-
-
-
     }
 
 });
 
 
 
-
-
-
 $(document).ready(function () {
 
-    carregaImagens()
+    carregaImagens();
+
+
+   
+   
+
 
 });
 
@@ -124,7 +136,7 @@ function carregaImagens(qtd) {
     if (divsPokemon <= 120) {
 
         if (qtd != null) {
-            lockScroll();
+            //lockScroll();
             var divsPokemonLimit = '20';
             var divsPokemonoffset = divsPokemon + 20;
 
@@ -159,9 +171,9 @@ function carregaImagens(qtd) {
                 var edicaoDois = edicaoUm.replace("https://pokeapi.co/api/v2/pokemon/", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/");
                 var edicaoTres = edicaoDois.slice(0, -1)
 
-                $(".poke_content").append("<a class='pokemon' title='Pokemon " + resultFinal['name'] + "' href='#' onclick='openModal($(this), event)'><span class='border'><span class='pokebola'></span>" +
+                $(".poke_content").append("<a class='pokemon " + resultFinal['name'] + "' title='Pokemon " + resultFinal['name'] + "' href='#' onclick='openModal($(this), event)'><span class='border'><span class='pokebola'></span>" +
                     "<input type='hidden' value='" + resultFinal['url'] + "'>" +
-                "<span class='lazyload'><!--<img src='" + edicaoTres + ".png' alt='" + resultFinal['name'] + "'> --></span><p>" + resultFinal['name'] + "<p/></span></a>");
+                "<img class='lazy' data-src='" + edicaoTres + ".png' class='" + resultFinal['name'] + "' alt='" + resultFinal['name'] + "'><p>" + resultFinal['name'] + "<p/></span></a>");
 
 
             })
@@ -172,20 +184,13 @@ function carregaImagens(qtd) {
 
         }).done(function () {
 
-
-            function load(img) {
-
-                img.fadeOut(0, function () {
-                    img.fadeIn(1000);
+            $(function () {
+                $('.lazy').lazy({
+                    effect: "fadeIn",
+                    effectTime: 1000,
+                    threshold: 0
                 });
-
-
-            }
-
-            $('.lazyload').lazyload({ load: load });
-
-
-
+            });
 
             //para desktop grandes
             if ($(window).width() >= 1500) {
@@ -193,10 +198,11 @@ function carregaImagens(qtd) {
                 if ($('.poke_content').height() <= $(window).height() - 193) {
 
                     carregaImagens(scroll);
+                   
                 }
             }
 
-            unlockScroll();
+            //unlockScroll();
 
         });
 
