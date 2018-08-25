@@ -21,7 +21,7 @@ gulp.task('scripts', function () {
   	.on('error', function (err) {
   	    console.error('Error!', err.message);
   	})
-    //.pipe(uglify())
+    .pipe(uglify())
 	.pipe(concat('scripts.min.js'))
 	.pipe(gulp.dest(directory + '/js'))
 });
