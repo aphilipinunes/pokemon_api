@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Indira K';
+    src: url('IndiraK.eot');
+    src: url('IndiraK.eot?#iefix') format('embedded-opentype'),
+        url('IndiraK.woff2') format('woff2'),
+        url('IndiraK.woff') format('woff'),
+        url('IndiraK.ttf') format('truetype'),
+        url('IndiraK.svg#IndiraK') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

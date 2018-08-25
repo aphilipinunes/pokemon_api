@@ -13,11 +13,14 @@ var directory = 'build';
 // Scripts
 gulp.task('scripts', function () {
     return gulp.src(['src/js/jquery.min.js',
+    'src/js/jquery-ui.js',
+     'src/js/jquery.lazyload.min.js',
+          'src/js/jquery.modal.min.js',
     'src/js/main.js'])
   	.on('error', function (err) {
   	    console.error('Error!', err.message);
   	})
-    .pipe(uglify())
+    //.pipe(uglify())
 	.pipe(concat('scripts.min.js'))
 	.pipe(gulp.dest(directory + '/js'))
 });
