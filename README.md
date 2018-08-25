@@ -1,4 +1,4 @@
-
+﻿
 
 ##### Layout ###
 Utilizado cores, formas arredondadas e fontes inspirados no logo e desenho "Pokémon"
@@ -22,3 +22,12 @@ Modal responsivo
  - Automação com Gulp e utilizado Sass para o css.
  - CSS e JS minificados via Gulp para velocidade de renderização.
 
+
+#### Navegadores
+ - Chrome
+ - Opera
+ - Firefox
+
+
+#### Celulares
+ - Android
