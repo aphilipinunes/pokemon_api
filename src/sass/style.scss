@@ -53,6 +53,11 @@ header {
     }
 }
 
+img{
+    border:0;
+}
+
+
 
 #modal {
     font-family: $font-texts;
@@ -111,13 +116,6 @@ header {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
 
     .pokemon {
         display: inline-block;
@@ -126,13 +124,7 @@ header {
         background-position: 1px -1px;
         @include transition();
         position: relative;
-        -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
-        -moz-box-flex: 1; /* OLD - Firefox 19- */
-        -webkit-flex: 1; /* Chrome */
-        -ms-flex: 1; /* IE 10 */
-        flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-        margin: 0 4% 20px;
-
+        width:20%;
         img {
             width: 96px;
             height: 96px;
@@ -143,6 +135,7 @@ header {
             display: inline-block;
             border-radius: 90px;
             min-height: 143px;
+            max-width: 146px;
         }
 
 
@@ -266,21 +259,14 @@ header {
     .poke_content {
         max-width: 1500px;
     }
+}
 
-    .pokemon {
-        margin: 0 25px 20px;
+@media (max-width: 870px) {
+    .poke_content .pokemon {
+        width: 25%;
     }
 }
 
-@media (max-width: 815px) {
-    .pokemon {
-        margin: 0 11% 20px;
-    }
-
-    .poke_content {
-        width: 580px;
-    }
-}
 
 @media (max-width: 767px) {
 
@@ -299,36 +285,43 @@ header {
 }
 
 
+
 @media (max-width: 706px) {
 
 
-    .pokemon:active .pokebola, .pokemon:focus .pokebola, .pokemon:hover .pokebola {
+    .pokemon:active .pokebola,
+    .pokemon:focus .pokebola,
+    .pokemon:hover .pokebola {
         left: 18%;
     }
 }
 
-
-
-
-@media (max-width: 660px) {
-
-
+@media (max-width: 670px) {
     .poke_content {
-        max-width: 540px;
-    }
+        .pokemon {
+            width: 33.3%;
 
-    .pokemon:active .pokebola, .pokemon:focus .pokebola, .pokemon:hover .pokebola {
-        left: 18%;
+            &:active .pokebola,
+            &:focus .pokebola,
+            &:hover .pokebola {
+                left: 18%;
+            }
+        }
     }
 }
 
-@media (max-width: 550px) {
-    .pokemon {
-        margin: 0 3% 20px;
-    }
+
+
+
+@media (max-width: 500px) {
+
 
     .poke_content {
         max-width: 350px;
+
+        .pokemon {
+            width: 50%;
+        }
     }
 }
 
@@ -336,13 +329,12 @@ header {
 
 @media (max-width: 520px) {
 
-
-    header h1 img {
-        width: 225px;
-    }
-
     header {
         padding: 15px 0 15px;
+
+        h1 img {
+            width: 225px;
+        }
     }
 }
 
@@ -364,12 +356,13 @@ header {
 
 
 @media (max-width: 340px) {
-    #modal img {
-        width: 109px;
-    }
 
     #modal {
         width: 260px;
         padding: 15px 10px;
+
+        img {
+            width: 109px;
+        }
     }
 }

@@ -1,7 +1,8 @@
 ﻿
 
 ##### Layout ###
-Utilizado cores, formas arredondadas e fontes inspirados no logo e desenho "Pokémon"
+- Utilizado cores, formas arredondadas e fontes inspirados no logo e desenho "Pokémon"
+- Layout responsivo
 
 ##### Lista de Pokémons da primeira geração ###
 - lista de (1 ao 150) em ordem crescente. 
@@ -27,7 +28,10 @@ Modal responsivo
  - Chrome
  - Opera
  - Firefox
+ - Microsoft Edge
+ - Safari
 
 
 #### Celulares
  - Android
+ - Iphone

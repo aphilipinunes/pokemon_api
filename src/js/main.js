@@ -1,7 +1,7 @@
 ﻿$(window).scroll(function () {
-    //scroll para mobile
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-     
+    //scroll para android mobile
+    if (/Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
         window.onscroll = function () {
             var scrollHeight, totalHeight;
             scrollHeight = document.body.scrollHeight;
@@ -12,19 +12,16 @@
             }
         }
 
-        //$(window).bind('scroll', function () {
-        //    if ($(window).scrollTop() >= $('.poke_content').offset().top + $('.posts').outerHeight() - window.innerHeight) {
-        //        alert('end reached');
-        //    }
-        //});
-      
+        //scroll para desktops e iphone
     } else {
-
-        //scroll para desktop
-        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        var documentHeight = $(document).height();
+        var scrollDifference = $(window).height() + $(window).scrollTop();
+        if (documentHeight == scrollDifference) {
 
             carregaImagens(scroll);
+
         }
+
 
     }
 
@@ -35,11 +32,6 @@
 $(document).ready(function () {
 
     carregaImagens();
-
-
-   
-   
-
 
 });
 
@@ -162,7 +154,7 @@ function carregaImagens(qtd) {
 
         $.getJSON("https://pokeapi.co/api/v2/pokemon/" + scroll, function (result) {
 
-            
+
 
             $.each(result.results, function (i, resultFinal) {
 
@@ -198,7 +190,7 @@ function carregaImagens(qtd) {
                 if ($('.poke_content').height() <= $(window).height() - 193) {
 
                     carregaImagens(scroll);
-                   
+
                 }
             }
 
