@@ -53,8 +53,8 @@ header {
     }
 }
 
-img{
-    border:0;
+img {
+    border: 0;
 }
 
 
@@ -124,7 +124,11 @@ img{
         background-position: 1px -1px;
         @include transition();
         position: relative;
-        width:20%;
+        width: 20%;
+        /*safari*/
+        flex: 1;
+        flex-basis: 20%;
+
         img {
             width: 96px;
             height: 96px;
