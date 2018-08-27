@@ -268,6 +268,7 @@ img {
 @media (max-width: 870px) {
     .poke_content .pokemon {
         width: 25%;
+        flex-basis: 25%;
     }
 }
 
@@ -304,7 +305,7 @@ img {
     .poke_content {
         .pokemon {
             width: 33.3%;
-
+            flex-basis: 33.3%;
             &:active .pokebola,
             &:focus .pokebola,
             &:hover .pokebola {
@@ -325,6 +326,7 @@ img {
 
         .pokemon {
             width: 50%;
+             flex-basis: 50%;
         }
     }
 }
