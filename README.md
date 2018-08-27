@@ -12,8 +12,8 @@
 Caso o usuário tenha um monitor grande (1500px de largura ou maior), o primeiro carregamento será até preencher a altura do monitor(20 itens, 40 itens, etc).
 
 ##### Detalhe do Pokémon ###
-Detalhes do pokémon através de um único modal jquery, apenas mudam as informações através do clique
-Modal responsivo
+- Detalhes do pokémon através de um único modal jquery, apenas mudam as informações através do clique
+- Modal responsivo
 
 
 #### Utilizados:
