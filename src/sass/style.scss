@@ -30,7 +30,7 @@ header {
     margin-bottom: 40px;
     padding: 10px 0 20px 0;
     background-color: darken($colorBlue, 10);
-    border-bottom: solid 1px;
+    border-bottom: solid 8px $colorBlue;
 
     h1 {
         text-align: center;
@@ -101,7 +101,7 @@ img{
         line-height: 32px;
         /* height: 31px; */
         font-size: 29px;
-        border-bottom: solid 1px darken($colorBlue, 20);
+        border-bottom: solid 4px darken($colorBlue, 20);
         text-align: center;
     }
 }
